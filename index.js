@@ -13,13 +13,6 @@ const server = http.createServer((req,res)=>{
   }else{
     res.end("404 page not found uwu");
   }
-
-  
-  
-
-
-
-
 }) // created server method
 
 server.listen(port,()=>{
