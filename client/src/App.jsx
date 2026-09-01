@@ -3,11 +3,11 @@ import axios from 'axios'
 
 export default function App() {
 
+  // creating state variables for username, age and city using useState hook
   let [username, setUsername] = useState(null)
   let [age, setAge] = useState(null)
   let [city, setCity] = useState(null)
 
- 
 // fetching data from the server using fetch api and then converting the response to json and then logging it to the console , trying  to connect the server and client using fetch api and then logging the response to the console
 async function getRes() {
 
@@ -20,13 +20,12 @@ async function getRes() {
   //   console.log(err)
   // })
 
-axios.post('http://localhost:8000', { username: username, age: age, city: city })
+axios.post('http://localhost:8000', 
+  { username: username, age: age, city: city })
 .then((res) => {
   console.log(res.data)
 }).catch((err) => {
   console.log(err)})
-
-
 }
 
   return (
