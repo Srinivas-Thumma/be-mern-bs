@@ -1,16 +1,17 @@
 {
-  "name": "mern-",
+  "name": "server",
   "version": "1.0.0",
-  "description": "i hate this :)",
+  "description": "lul",
   "license": "ISC",
-  "author": "owlscreen",
+  "author": "owl",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.2.1",
     "nodemon": "^3.1.14"
   }
