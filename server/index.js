@@ -32,10 +32,11 @@ app.post("/", (req, res) => {
 app.get("/head",(req,res) =>{
   console.log(req.headers); // Log the request headers to the console
   res.set("x-Custom-Header", "This is a custom header"); // Set a custom header in the response
+  res.removeHeader("x-Custom-Header"); // Remove the custom header from the response
   res.send("Check the response headers for the custom header"); // Send a response to the client , 
   // res.send() is imp after setting header , // because if we don't send a response, the client will keep waiting for a response and the request will time out.
 })
-
+ // we can remove custom headers which are set by us in the server code , but we can't remove headers which are set by the browser or the server itself.
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
