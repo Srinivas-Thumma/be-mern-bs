@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
 
 //we created a model User , this will be used to interact with the users collection in the database. The first argument is the name of the collection and the second argument is the schema we created above. 
 const User = mongoose.model("User" , userSchema);
+//mongodb will convert name into small and plural - User to users .
 
 // we will exporting User model , as we will be using it in other files to interact with the users collection in the database.
 export default User;
