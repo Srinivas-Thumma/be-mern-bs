@@ -7,8 +7,7 @@ import connectDB from "./config/db.js";
 import userRouter from "./routes/user.route.js";
 
 const app = express();
-const port = 8000;
-
+const port = process.env.PORT || 5000;
 
 
 app.use(express.json());//middleware to parse json data from the request body
